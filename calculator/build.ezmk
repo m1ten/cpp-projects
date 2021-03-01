@@ -1,0 +1,19 @@
+{
+	"cc": "g++-10",
+	"out": "CalcC++",
+	"src": "src/main.cpp",
+	"include_dirs": "-Iinclude",
+
+	"#default": "debug",
+	
+	"debug": [
+		"echo Building debug on platform #(os)...",
+		"#(cc) -o #(out) #(src) #(include_dirs) -g -Og",
+		"./#(out)"
+	],
+	"release": [
+		"echo Building release on platform #(os)...",
+		"#(cc) -o #(out) #(src) #(include_dirs) -Os",
+		"./#(out)"
+	]
+}
